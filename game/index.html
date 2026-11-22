@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palmera Nights — an original open-world crime game</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="hud">
+  <div id="hud-top-left">
+    <div id="hud-mission">FREE ROAM</div>
+    <div id="hud-objective"></div>
+    <div id="hud-clock"></div>
+  </div>
+  <div id="hud-top-right">
+    <div id="hud-stars">☆☆☆☆☆</div>
+    <div id="hud-cash">$0</div>
+    <div id="hud-respect">RESPECT 0</div>
+    <div id="health-bar"><div id="health-fill"></div></div>
+    <div id="hud-weapon">FISTS</div>
+    <div id="hud-speed"></div>
+  </div>
+  <canvas id="minimap" width="216" height="165"></canvas>
+  <div id="hud-banner"></div>
+  <div id="hud-dialogue"></div>
+  <div id="hud-bust"></div>
+  <div id="hud-controls">WASD drive / walk · E enter car · Shift sprint · Mouse aim · Click / Space attack · M map · Esc pause</div>
+</div>
+
+<div id="start-screen" class="screen">
+  <div class="panel">
+    <h1>PALMERA <span>NIGHTS</span></h1>
+    <p class="tagline">An original open-world crime game in the sun-soaked coastal city of Palmera.</p>
+    <p>Rico Vale arrives with $120, quick hands and no plan. The <b>Marisol family</b> has work:
+    steal the right cars, run the port, win the beach race and take the ledger from Torre Serena.
+    The Palmera PD has other ideas — every crime witnessed raises your wanted stars.</p>
+    <ul class="features">
+      <li>Explore 6 districts — Marisol Beach, Port Azul, Downtown, The Palms, Mercado Viejo, Costa Serena</li>
+      <li>Steal and drive 7 car models in live traffic, with pedestrians who flee, fight and snitch</li>
+      <li>6-mission story chain, free-roam deliveries, cash &amp; respect progression, local save</li>
+    </ul>
+    <p class="controls-line">WASD / arrows — move &amp; drive · <b>E</b> — enter / exit car · <b>Shift</b> — sprint ·
+    <b>Mouse</b> — aim · <b>Click / Space</b> — punch &amp; shoot · <b>M</b> — city map · <b>Esc</b> — pause</p>
+    <button id="btn-start">START — MEET THE FAMILY</button>
+    <button id="btn-newgame" class="ghost">Erase save &amp; restart story</button>
+  </div>
+</div>
+
+<div id="pause-screen" class="screen hidden">
+  <div class="panel">
+    <h2>PAUSED</h2>
+    <p>Palmera waits. Your cash, respect and mission progress are saved on this machine.</p>
+    <button id="btn-resume">RESUME</button>
+  </div>
+</div>
+
+<div id="over-screen" class="screen hidden">
+  <div class="panel">
+    <h2 id="over-title">WASTED</h2>
+    <p id="over-text"></p>
+    <button id="btn-respawn">BACK ON THE STREET</button>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
